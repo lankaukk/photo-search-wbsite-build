@@ -1,10 +1,16 @@
 import React from 'react'
 
-const GifList = props => {
-  console.log(props);
+const GifList = (props) => {
+  // console.log(props);
   return (
-    <div>
-        {props.gifs.map(gif => <img key={gif.url} src={gif.url}  height="300px" alt="gif"/>)}
+    <div className="picCard">
+      {props.gifs.map(gif =>     
+        <a key={gif.url} target="_blank" href={gif.photographer_url}>{gif.photographer}
+          <br></br>
+          <img key={gif.url} src={gif.url} alt="pexel"></img>
+          <br></br>
+        </a>
+      )}
     </div>
   )
 }

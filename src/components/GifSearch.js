@@ -8,15 +8,21 @@ class GifSearch extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.fetchGIFs(this.state.query)
+    this.props.fetchGIFs(this.state.query, 1)
   }
 
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" value={this.state.query} onChange={event => this.setState({query: event.target.value})} />
-          <input type="submit"></input>
+          <h1>Pexels Browser</h1>
+
+          <input placeholder="Search..." type="text" value={this.state.query} className="search bar" onChange={event => this.setState({query: event.target.value})} />
+
+
+          
+          {/* <input type="submit" value="Search" className="search button"></input> */}
+          
         </form>
         <br></br>
       </div>
