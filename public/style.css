@@ -26,3 +26,38 @@ img:hover {
     border-radius: 25px;
     padding: 1%;
 }
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 8px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.pageIndex {
+    padding: 0 5% 0 5%;
+    display: inline-block;
+    font-size: 16pt;
+    transform: translate(0px, -10px);
+    
+}

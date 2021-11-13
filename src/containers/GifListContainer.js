@@ -1,23 +1,24 @@
-import React, { Component } from 'react'
-import GifList from '../components/GifList'
-import GifSearch from '../components/GifSearch'
-import Paginate from '../components/Paginate';
+import React, { Component } from 'react';
+import GifList from '../components/GifList';
+// import GifSearch from '../components/GifSearch';
+// import Paginate from '../components/Paginate';
+import PicSearchPaginate from '../components/PicSearchPaginate';
 
 const API_KEY = "563492ad6f9170000100000101d30fe3cde6484f8767eda7a28ba586"
 
 class GifListContainer extends Component {
 
   state = {
-    gifs: [],
-    query: GifSearch.state,
-    index: Paginate.state
+    gifs: []
   }
 
   render() {
     return(
       <div>
-        <GifSearch fetchGIFs={this.fetchGIFs} />
-        <Paginate fetchGIFs={this.fetchGIFs} fetchCurated={this.fetchCurated} />
+        {/* <GifSearch fetchGIFs={this.fetchGIFs} />
+        <Paginate fetchGIFs={this.fetchGIFs} fetchCurated={this.fetchCurated} /> */}
+
+        <PicSearchPaginate fetchGIFs={this.fetchGIFs} fetchCurated={this.fetchCurated}/>
 
         <GifList gifs={this.state.gifs} />
         
@@ -25,7 +26,7 @@ class GifListContainer extends Component {
     )
   }
 
-  fetchGIFs = (query, index = 1) => { 
+  fetchGIFs = (query, index) => { 
     // if (query === "" || undefined) {
     //   this.fetchCurated() }
     // else (
